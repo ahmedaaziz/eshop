@@ -108,3 +108,23 @@
     }
   }
 }
+
+
+//Responsive
+
+@media screen and (max-width:768px) {
+  .product {
+    .product_img {
+      width: 100%;
+      img {
+        object-fit: contain;
+      }
+    }
+  }
+
+  .sorting_el {
+    select {
+      width: 100%;
+    }
+  }
+}

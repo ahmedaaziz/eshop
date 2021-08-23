@@ -1,7 +1,7 @@
  <app-header></app-header>
  <div class="container">
    <div class="row">
-      <div class="col-3">
+      <div class="co-12 col-md-3">
         <div class="row">
           <div class="col-md-12">
             <div class="filteration_box mt-4">
@@ -21,11 +21,6 @@
                     </label>
                   </div>
                 </div>
-                <!-- <div class="collapsible-header" (click)="showFirst=!showFirst">
-                  <i class="material-icons" *ngIf="showFirst">filter_drama</i>
-                  <i class="material-icons" *ngIf="!showFirst">place</i>First Section</div> -->
-
-
                 <div class="filteration_box_choice">
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
@@ -84,9 +79,13 @@
             </div>
             <div class="filteration_box mt-4">
               <div class="filterarion_box_head">
-                <span>Collection</span> <a href="javascript:void(0)" class="text-right"><i class="fas fa-chevron-up"></i></a>
+                <span>Collection</span>
+                <a href="javascript:void(0)" class="text-right" (click)="isBoxAvailable = !isBoxAvailable">
+                  <i *ngIf="isBoxAvailable" class="fas fa-chevron-up"></i>
+                  <i *ngIf="!isBoxAvailable" class="fas fa-chevron-down"></i>
+                </a>
               </div>
-              <div class="filteration_box_options">
+              <div class="filteration_box_options" [hidden]='!isBoxAvailable'>
 
               <div class="filteration_box_choice">
                 <div class="form-check">
@@ -132,9 +131,13 @@
             </div>
             <div class="filteration_box mt-4">
               <div class="filterarion_box_head">
-                <span>Size</span> <a href="javascript:void(0)" class="text-right"><i class="fas fa-chevron-up"></i></a>
+                <span>Size</span>
+                <a href="javascript:void(0)" class="text-right" (click)="isBoxAvailable = !isBoxAvailable">
+                  <i *ngIf="isBoxAvailable" class="fas fa-chevron-up"></i>
+                  <i *ngIf="!isBoxAvailable" class="fas fa-chevron-down"></i>
+                </a>
               </div>
-              <div class="filteration_box_options">
+              <div class="filteration_box_options" [hidden]='!isBoxAvailable'>
 
               <div class="filteration_box_choice">
                 <button>XS</button>
@@ -148,31 +151,35 @@
             </div>
             <div class="filteration_box mt-4">
               <div class="filterarion_box_head">
-                <span>Colors</span> <a href="javascript:void(0)" class="text-right"><i class="fas fa-chevron-up"></i></a>
+                <span>Colors</span>
+                <a href="javascript:void(0)" class="text-right" (click)="isBoxAvailable = !isBoxAvailable">
+                  <i *ngIf="isBoxAvailable" class="fas fa-chevron-up"></i>
+                  <i *ngIf="!isBoxAvailable" class="fas fa-chevron-down"></i>
+                </a>
               </div>
-              <div class="filteration_box_options">
+              <div class="filteration_box_options" [hidden]='!isBoxAvailable'>
 
               <div class="filteration_box_choice">
                 <button><div class="color" style="background:#000"></div></button>
-                <button><div class="color"></div></button>
-                <button><div class="color"></div></button>
-                <button><div class="color"></div></button>
-                <button><div class="color"></div></button>
-                <button><div class="color"></div></button>
+                <button><div class="color" style="background:#6F3E18"></div></button>
+                <button><div class="color" style="background:#D4BE8D"></div></button>
+                <button><div class="color" style="background:#838383"></div></button>
+                <button><div class="color" style="background:#fff;border:1px solid #cecece"></div></button>
+                <button><div class="color" style="background:#0F73AD"></div></button>
               </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-9">
+      <div class="col-12 col-md-9">
         <div class="row mt-3">
-          <div class="col-6">
+          <div class="col-12 col-md-6">
             <h4 class="product_list__title text-left">
               Men's Tops (133)
             </h4>
           </div>
-          <div class="col-6">
+          <div class="col-12 col-md-6">
             <span class="sorting_el">
               Show products:
               <select class="custom-select">
@@ -190,7 +197,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-4" *ngFor="let item of products;">
+          <div class="col-12 col-md-4" *ngFor="let item of products;">
             <div class="product">
               <a href="javascript:void(0)" (click)="onSelect(item)" [id]='item.id'>
               <div class="product_img">

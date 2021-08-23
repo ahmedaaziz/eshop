@@ -1,0 +1,111 @@
+<app-header></app-header>
+
+<div class="container">
+  <div class="product-page_head mt-4">
+    <div class="row">
+      <div class="col-md-6">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i></a></li>
+            <li class="breadcrumb-item"><a href="#">Men`s Tops</a></li>
+            <li class="breadcrumb-item"><a href="#">T-Shirt</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{productList.name}}</li>
+          </ol>
+        </nav>
+
+      </div>
+      <div class="col-md-3">
+        <div class="row">
+          <div class="col-md-2">
+            <span>
+              <img src="../../../assets/images/delivery.png" alt="" srcset="">
+            </span>
+
+          </div>
+          <div class="col-md-10">
+            <h5>
+              <b>Standard shipment</b>
+            </h5>
+            <p class="product-page_promotion__paragraph">
+              Free within 3-6 business days
+            </p>
+
+          </div>
+        </div>
+        <!-- <h5>
+          <b>Standard shipment</b>
+        </h5>
+        <p class="product-page_promotion__paragraph">
+          Free within 3-6 business days
+        </p> -->
+      </div>
+      <div class="col-md-3">
+        <div class="row">
+          <div class="col-md-2">
+            <span>
+              <img src="../../../assets/images/express.png" alt="" srcset="">
+            </span>
+            </div>
+          <div class="col-md-10">
+            <h5>
+              <b>Express delivery </b>
+            </h5>
+            <p class="product-page_promotion__paragraph">
+              $35,00 available
+            </p>
+
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-6">
+      <app-product-images-slider></app-product-images-slider>
+    </div>
+    <div class="col-md-6">
+      <div class="row">
+        <div class="col-6">
+          <span  class="badge badge-danger">
+            Sale
+          </span >
+
+        </div>
+        <div class="col-6">
+          <p class="product_id text-right">
+            Product <br> ID:261311
+          </p>
+        </div>
+      </div>
+      <div class="productInfo">
+        <div class="productInfo_name">
+          <h1>{{productInfo.name}}</h1>
+        </div>
+        <div class="productInfo_price">
+            <div *ngIf="!productInfo.newPrice;else newPrice">
+              <span>{{productInfo.price | currency}}</span>
+
+            </div>
+            <ng-template #newPrice>
+              <span class="newPrice-alert text-left">{{productInfo.newPrice | currency}}</span>
+              <span class="price  text-left"><del>{{productInfo.price | currency}}</del></span>
+              <span class="brand text-right">HOUSE MY BRAND</span>
+
+            </ng-template>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- <div class="selected-products">
+    <div class="row">
+      <app-selected-products></app-selected-products>
+    </div>
+  </div> -->
+</div>
+<app-newsletter-subscribe></app-newsletter-subscribe>
+<app-footer></app-footer>

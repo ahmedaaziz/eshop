@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import './assets/styles/variables';
+@import './assets/styles/_components/header';
+@import './assets/styles/_components/footer';
+@import './assets/styles/_functions/functions';
+@import './assets/styles/_mixins/mixins';
+@import '~swiper/swiper-bundle';
+@import "~swiper/swiper";
+@import "~swiper/components/navigation/navigation";
+@import "~swiper/components/thumbs/thumbs";
+

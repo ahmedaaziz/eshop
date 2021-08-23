@@ -1,0 +1,102 @@
+.product_list__title {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.sorting_el {
+    font-size: .8125rem;
+    font-weight:500;
+    margin-right: .625rem;
+
+  select {
+    border-radius: .9375rem;
+    width: 4.25rem;
+  }
+}
+.product {
+  margin-top: 2.375rem;
+  margin-bottom: 4.375rem;
+  font-family: 'Poppins',sans-serif;
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+  .product_img {
+    width: 17rem;
+    height: 17rem;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .productInfo {
+    .productInfo_name {
+      margin: .9375rem 0;
+      h1 {
+        font-size: .875rem;
+        font-weight: 300;
+      }
+    }
+    .productInfo_price {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1rem;
+      .newPrice-alert {
+        color:#FF0000;
+      }
+      .price {
+        color: #CECECE;
+      }
+    }
+  }
+}
+
+.filteration_box{
+  border:1px solid #E6E6E6;
+  padding: 1rem;
+
+  &:last-child {
+    margin-bottom: 2rem;
+  }
+  .filterarion_box_head {
+    display: flex;
+    justify-content: space-between;
+    span{
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-family: 'POPPINS',sans-serif;
+
+
+      }
+      a {
+        color: #000;
+      }
+  }
+  .filteration_box_choice {
+    margin-top: .9375rem;
+
+    button {
+      background: #fff;
+      outline: 0;
+      border: 1px solid #CECECE;
+      width: 2.25rem;
+      height: 2.25rem;
+      font-size: .8125rem;
+    }
+    .filteration_quantity {
+      color:#C4C4C4;
+    }
+    input[type=checkbox] {
+      border-radius: 1px;
+      &:checked {
+        background-color: #e9ecee;
+        border: 1px solid #adb8c0;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+        color: #99a1a7;
+
+      }
+    }
+  }
+}

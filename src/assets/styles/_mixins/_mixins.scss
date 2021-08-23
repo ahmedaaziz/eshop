@@ -1,0 +1,6 @@
+
+// Convert Rem to Px
+@mixin fontSize($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}

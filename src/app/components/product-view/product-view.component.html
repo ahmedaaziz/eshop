@@ -1,0 +1,223 @@
+ <app-header></app-header>
+ <div class="container">
+   <div class="row">
+      <div class="col-3">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="filteration_box mt-4">
+              <div class="filterarion_box_head">
+                <span>Product Type</span>
+                <a href="javascript:void(0)" class="text-right" (click)="isBoxAvailable = !isBoxAvailable">
+                  <i *ngIf="isBoxAvailable" class="fas fa-chevron-up"></i>
+                  <i *ngIf="!isBoxAvailable" class="fas fa-chevron-down"></i>
+                </a>
+              </div>
+              <div class="filteration_box_options" [hidden]='!isBoxAvailable'>
+                <div class="filteration_box_choice">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                    <label class="form-check-label" for="defaultCheck1">
+                      T-shirt <span class="filteration_quantity">(111)</span>
+                    </label>
+                  </div>
+                </div>
+                <!-- <div class="collapsible-header" (click)="showFirst=!showFirst">
+                  <i class="material-icons" *ngIf="showFirst">filter_drama</i>
+                  <i class="material-icons" *ngIf="!showFirst">place</i>First Section</div> -->
+
+
+                <div class="filteration_box_choice">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                    <label class="form-check-label" for="defaultCheck2">
+                      Sweatshirts <span class="filteration_quantity">(131)</span>
+                    </label>
+                  </div>
+                </div>
+
+
+                <div class="filteration_box_choice">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+                    <label class="form-check-label" for="defaultCheck3">
+                      Tank Tops <span class="filteration_quantity">(56)</span>
+                    </label>
+                  </div>
+                </div>
+
+
+                <div class="filteration_box_choice">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+                    <label class="form-check-label" for="defaultCheck4">
+                      Dress shirts <span class="filteration_quantity">(8)</span>
+                    </label>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+            <div class="filteration_box mt-4">
+              <div class="filterarion_box_head">
+                <span>Price</span>
+                <a href="javascript:void(0)" class="text-right" (click)="isBoxAvailable = !isBoxAvailable">
+                  <i *ngIf="isBoxAvailable" class="fas fa-chevron-up"></i>
+                  <i *ngIf="!isBoxAvailable" class="fas fa-chevron-down"></i>
+                </a>
+              </div>
+              <div class="filteration_box_options" [hidden]='!isBoxAvailable'>
+
+
+
+
+
+              <div class="filteration_box_choice">
+                <div data-role="rangeslider">
+                  <input type="range" name="price-min" id="price-min" value="200" min="0" max="1000">
+                  <input type="range" name="price-max" id="price-max" value="800" min="0" max="1000">
+                </div>
+
+            </div>
+
+
+            </div>
+            <div class="filteration_box mt-4">
+              <div class="filterarion_box_head">
+                <span>Collection</span> <a href="javascript:void(0)" class="text-right"><i class="fas fa-chevron-up"></i></a>
+              </div>
+              <div class="filteration_box_options">
+
+              <div class="filteration_box_choice">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                  <label class="form-check-label" for="defaultCheck1">
+                    T-shirt <span class="filteration_quantity">(111)</span>
+                  </label>
+                </div>
+              </div>
+
+
+              <div class="filteration_box_choice">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                  <label class="form-check-label" for="defaultCheck2">
+                    Sweatshirts <span class="filteration_quantity">(131)</span>
+                  </label>
+                </div>
+              </div>
+
+
+              <div class="filteration_box_choice">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+                  <label class="form-check-label" for="defaultCheck3">
+                    Tank Tops <span class="filteration_quantity">(56)</span>
+                  </label>
+                </div>
+              </div>
+
+
+              <div class="filteration_box_choice">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+                  <label class="form-check-label" for="defaultCheck4">
+                    Dress shirts <span class="filteration_quantity">(8)</span>
+                  </label>
+                </div>
+              </div>
+
+              </div>
+
+            </div>
+            <div class="filteration_box mt-4">
+              <div class="filterarion_box_head">
+                <span>Size</span> <a href="javascript:void(0)" class="text-right"><i class="fas fa-chevron-up"></i></a>
+              </div>
+              <div class="filteration_box_options">
+
+              <div class="filteration_box_choice">
+                <button>XS</button>
+                <button>S</button>
+                <button>M</button>
+                <button>L</button>
+                <button>XL</button>
+                <button>XXL</button>
+              </div>
+              </div>
+            </div>
+            <div class="filteration_box mt-4">
+              <div class="filterarion_box_head">
+                <span>Colors</span> <a href="javascript:void(0)" class="text-right"><i class="fas fa-chevron-up"></i></a>
+              </div>
+              <div class="filteration_box_options">
+
+              <div class="filteration_box_choice">
+                <button>XS</button>
+                <button>S</button>
+                <button>M</button>
+                <button>L</button>
+                <button>XL</button>
+                <button>XXL</button>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-9">
+        <div class="row mt-3">
+          <div class="col-6">
+            <h4 class="product_list__title text-left">
+              Men's Tops (133)
+            </h4>
+          </div>
+          <div class="col-6">
+            <span class="sorting_el">
+              Show products:
+              <select class="custom-select">
+                <option value="15">15</option>
+                <option value="30">30</option>
+              </select>
+            </span>
+            <span class="sorting_el">
+              Show products:
+              <select class="custom-select">
+                <option value="15">15</option>
+                <option value="30">30</option>
+              </select>
+            </span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4" *ngFor="let item of products;">
+            <div class="product">
+              <a href="javascript:void(0)" (click)="onSelect(item)" [id]='item.id'>
+              <div class="product_img">
+                <img [src]="item.imgUrl" alt="" srcset="">
+              </div>
+              <div class="productInfo">
+                <div class="productInfo_name">
+                  <h1>{{item.name}}</h1>
+                </div>
+                <div class="productInfo_price">
+                  <div *ngIf="!item.newPrice;else newPrice">
+                    <span>{{item.price | currency}}</span>
+
+                  </div>
+                  <ng-template #newPrice>
+                    <span class="newPrice-alert text-left">{{item.newPrice | currency}}</span>
+                    <span class="price text-right"><del>{{item.price | currency}}</del></span>
+                  </ng-template>
+
+                </div>
+              </div>
+            </a>
+            </div>
+          </div>
+        </div>
+      </div>
+   </div>
+ </div>
+ <app-newsletter-subscribe></app-newsletter-subscribe>
+<app-footer></app-footer>

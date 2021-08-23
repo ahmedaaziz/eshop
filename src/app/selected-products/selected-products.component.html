@@ -1,3 +1,4 @@
+
 <swiper
 [slidesPerView]="3"
 [spaceBetween]="50"
@@ -5,12 +6,30 @@
 (slideChange)="onSlideChange()"
 [navigation]="true"
 [pagination]="{ clickable: true }"
-[scrollbar]="{ draggable: true }"
+class="selectedProductSlider"
 >
-<ng-template swiperSlide>Slide 1</ng-template>
-<ng-template swiperSlide>Slide 2</ng-template>
-<ng-template swiperSlide>Slide 3</ng-template>
-<ng-template swiperSlide>Slide 4</ng-template>
-<ng-template swiperSlide>Slide 5</ng-template>
-<ng-template swiperSlide>Slide 6</ng-template>
+<ng-template swiperSlide *ngFor="let item of products" class="col-md-4 col-12">
+    <div class="selectedProduct">
+      <div class="selectedProduct__img">
+        <img [src]="item.imgUrl" alt="" srcset="">
+      </div>
+      <div class="selectedProduct__info">
+        <h1>{{item.name}}</h1>
+      </div>
+      <div class="selectedProdcuct__info_price">
+        <div *ngIf="!item.newPrice;else newPrice">
+          <span>{{item.price | currency}}</span>
+
+        </div>
+        <ng-template #newPrice>
+          <span class="newPrice-alert text-left">{{item.newPrice | currency}}</span>
+          <span class="price text-right"><del>{{item.price | currency}}</del></span>
+        </ng-template>
+
+      </div>
+
+
+    </div>
+
+</ng-template>
 </swiper>

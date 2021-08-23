@@ -5,6 +5,7 @@ import SwiperCore, {
   Scrollbar,
   A11y,
 } from 'swiper/core';
+import { GetProductDataService } from '../shared/services/get-product-data.service';
 
 // install Swiper modules
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
@@ -16,11 +17,17 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
   styleUrls: ['./selected-products.component.scss']
 })
 export class SelectedProductsComponent implements OnInit {
-
-  constructor() { }
+  products:any = [];
+  constructor(private _getProduct: GetProductDataService) { }
 
   ngOnInit(): void {
-  }
+    this._getProduct.getProductsList().subscribe(res=>{
+      this.products = res;
+      console.log(this.products);
+
+    });
+    }
+
   public productImages:string[] = [
     '../../../assets/images/1.png',
     '../../../assets/images/2.png',

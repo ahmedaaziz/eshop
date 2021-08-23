@@ -1,0 +1,34 @@
+.selectedProductSlider {
+  font-family: 'Poppins',sans-serif;
+  height: 100%;
+}
+.selectedProduct {
+  margin: 1rem 0;
+  .selectedProduct__img {
+    img {
+      width: auto;
+      height: auto;
+      object-fit: unset;
+    }
+  }
+  .selectedProduct__info {
+    h1 {
+      font-size: 1rem;
+      font-weight: 300;
+      text-align: left;
+      margin: 1rem 0;
+    }
+  }
+  .selectedProdcuct__info_price {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    .newPrice-alert {
+      color:#FF0000;
+    }
+    .price {
+      color: #CECECE;
+    }
+  }
+
+}
